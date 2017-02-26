@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Lenose de Perù | Nespresso </title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 
     </head>
     <body>
@@ -64,62 +64,83 @@
                 <h1>Lenose de Perù</h1>
             </div>
             <div class="content-body ">
+                <img src="" alt="">
                 <p>Toute la saveur du Pérou dans un Lungo Pure Origine</p>
             </div>
 
 
         </section>
-    <section class="content-master _two">
-        <div class="content-head ">
-            <h2>Histoire de la Càpsula</h2>
-            <p>Au coeur du Pérou, berceau du café, Nespresso a sélectionné un délicieux Arabica pour créer ce nouveau <span>Lungo Pure Origine</span>.</p>
-        </div>
-        <div class="content-body">
+        <section class="content-master _two">
+            <img src="" alt="">
+            <div class="content-head ">
+                <h2>Histoire de la Càpsula</h2>
+                <p>Au coeur du Pérou, berceau du café, Nespresso a sélectionné un délicieux Arabica pour créer ce nouveau <span>Lungo Pure Origine</span>.</p>
+            </div>
+            <div class="content-body">
 
-            <div class="content-body--frame">
-                <h3>Histoire</h3>
-                <p>Historia
-                    Le café Bio <span>Lenoso du Perù</span> est un cru
-                    d'arabica de grande qualité, cultivé dans une
-                    petite ferme familiale fondée en 1954.
+                <div class="content-body--frame">
+                    <h3>Histoire</h3>
+                    <p>Historia
+                        Le café Bio <span>Lenoso du Perù</span> est un cru
+                        d'arabica de grande qualité, cultivé dans une
+                        petite ferme familiale fondée en 1954.
+                    </p>
+                    <p>L'objectif principal de la plantation est de
+                    produire un café issu de l’agriculture biologique
+                    de qualité dans le plus pur respect de la nature,
+                    de l'homme et des traditions caféières locales.</p>
+
+                    <p>Aujourd'hui le Pérou se concentre sur la culture
+                    des cafés issus de <span>l'agriculture biologique</span> et
+                    possède un grand savoir faire dans domaine.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-master _three">
+            <img src="" alt="">
+
+            <div class="content-head ">
+                <h2>Emociones Sentidas</h2>
+                <p>Un lungo délicatement boisé
+                    avec des notes <span>acidulé</span>.</p>
+            </div>
+            <div class="content-body">
+                <div class="content-body--infographie">
+                    <ul>
+                        <li>Douceur: 2/5</li>
+                        <li>Arome: 3/5</li>
+                        <li>Corps: 1/5</li>
+                        <li>Fruité: 4/5</li>
+                    </ul>
+
+                </div>
+                <p>Ce café Pure Origine d'une délicate fraîcheur acidulée
+                    typique du Pérou révèle de surprenantes notes sauvages
                 </p>
-                <p>L'objectif principal de la plantation est de
-                produire un café issu de l’agriculture biologique
-                de qualité dans le plus pur respect de la nature,
-                de l'homme et des traditions caféières locales.</p>
-
-                <p>Aujourd'hui le Pérou se concentre sur la culture
-                des cafés issus de <span>l'agriculture biologique</span> et
-                possède un grand savoir faire dans domaine.</p>
+                <p>
+                    <span>de fruits rouges et de bois.</span>
+                    D'intensité 5, ce Grand Cru d'une grande finesse est
+                    idéalement savouré <span>en tasse Lungo (110ml)</span>.</p>
             </div>
-        </div>
-    </section>
-
-    <section class="content-master _three"></section>
-        <div class="content-head ">
-            <h2>Emociones Sentidas</h2>
-            <p>Un lungo délicatement boisé
-                avec des notes <span>acidulé</span>.</p>
-        </div>
-        <div class="content-body">
-            <div class="content-body--infographie">
-                <ul>
-                    <li>Douceur: 2/5</li>
-                    <li>Arome: 3/5</li>
-                    <li>Corps: 1/5</li>
-                    <li>Fruité: 4/5</li>
-                </ul>
-        
-            </div>
-            <p>Ce café Pure Origine d'une délicate fraîcheur acidulée
-                typique du Pérou révèle de surprenantes notes sauvages
-            </p>
-            <p>
-                <span>de fruits rouges et de bois.</span>
-                D'intensité 5, ce Grand Cru d'une grande finesse est
-                idéalement savouré <span>en tasse Lungo (110ml)</span>.</p>
-        </div>
-    <section class="content-master _four"></section>
+        </section>
+        <section class="content-master _four">
+            <img src="" alt="">
+        </section>
 
     </body>
+
+    <script>
+
+        // init controller
+        var controller = new ScrollMagic.Controller();
+
+        // create a scene
+        new ScrollMagic.Scene({
+            duration: 100,  // the scene should last for a scroll distance of 100px
+            offset: 50      // start this scene after scrolling for 50px
+        })
+            .setPin(".content-body--infographie") // pins the element for the the scene's duration
+            .addTo(controller); // assign the scene to the controller
+    </script>
 </html>

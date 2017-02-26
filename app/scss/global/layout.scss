@@ -17,19 +17,34 @@ header {
   justify-content: center;
 
 }
+h1, h2{
+  font-size: 28pt;
+}
+.staticControls{
+  .burger{
+    position: relative;
+    left: 90%;
+    bottom: 3.5rem;
+  }
+  .staticControls-actionBtn{
+    display: inline;
+    position: relative;
+    left: 50%;
+    bottom: -45rem;
+  }
+}
 
-  .staticControls{
-    .burger{
-      position: relative;
-      left: 90%;
-      bottom: 3.5rem;
-    }
-    .staticControls-actionBtn{
-      display: inline;
-      position: relative;
-      left: 50%;
-      bottom: -45rem;
-    }
+
+.content-master{
+  .content-head h1, .content-head h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
 
+  ._one{
 
+  }
+
+}
