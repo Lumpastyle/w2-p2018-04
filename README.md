@@ -19,6 +19,4 @@ Simply run the following commands into the project directory:
 ```sh
 $ npm install
 $ npm install gulp -g # you might need "sudo" before that if you get an error
-$ gulp
-```
-Your site should now be running at http://localhost:3000
+$ gulpjj
