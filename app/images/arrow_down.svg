@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="53" viewBox="0 0 26 53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="rectangle_gauche_copie" data-name="rectangle gauche copie" class="cls-1" d="M721.656,760.86V789h-1.617V760.86h1.617ZM721,737.992l12,11.918-12,11.917L709,749.91Z" transform="translate(-708 -737)"/>
+</svg>
