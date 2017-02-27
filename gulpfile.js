@@ -1,6 +1,27 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sync = require('browser-sync').create();
+    svgSprite = require("gulp-svg-sprites");
+    image = require('gulp-image');
+
+
+// --- images
+gulp.task('image', function () {
+    gulp.src('./app/assets/img/*')
+        .pipe(image())
+        .pipe(gulp.dest(__dirname + '/dist/assets/img/'));
+});
+
+gulp.task('default', ['image']);
+
+// --- SVG to Sprite
+
+
+gulp.task('sprites', function () {
+    return gulp.src('app/assets/svg/*')
+        .pipe(svgSprite())
+        .pipe(gulp.dest("/dist/assets/svg"));
+});
 
 gulp.task('html', function() {
     gulp.src('app/index.html')
@@ -27,3 +48,4 @@ gulp.task('sync', ['html', 'scss', 'watch'], function() {
 });
 
 gulp.task('default', ['sync'], function() {});
+

@@ -4,10 +4,10 @@
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
   @font-face {
     font-family: $font-family;
-    src: url("../fonts/#{$file-path}.eot");
-    src: url("../fonts/#{$file-path}.eot#iefix") format(’embedded-opentype’),
-    url("../fonts/#{$file-path}.woff") format(‘woff’),
-    url("../fonts/#{$file-path}.ttf") format(‘truetype’);
+    src: url("../assets/fonts/#{$file-path}.eot");
+    src: url("../assets/fonts/#{$file-path}.eot#iefix") format(’embedded-opentype’),
+    url("../assets/fonts/#{$file-path}.woff") format(‘woff’),
+    url("../assets/fonts/#{$file-path}.ttf") format(‘truetype’);
     font-weight: $font-weight;
     font-style: $font-style;
   }

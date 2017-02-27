@@ -3,8 +3,15 @@ $b: #000;
 
 body{
   color: $w;
-  background-color: $b;
+  background: url(../assets/img/background_home.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
+
 
 header {
   padding: 0;
@@ -43,8 +50,5 @@ h1, h2{
     margin: auto;
   }
 
-  ._one{
-
-  }
 
 }
