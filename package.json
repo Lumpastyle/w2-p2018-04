@@ -8,8 +8,8 @@
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",
     "gulp-image": "^2.7.5",
+    "gulp-minify": "0.0.15",
     "gulp-sass": "^2.3.2",
-    "gulp-svg-sprites": "^4.0.2",
     "webpack": "^2.2.1"
   },
   "scripts": {

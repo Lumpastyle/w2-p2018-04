@@ -5,24 +5,29 @@
   @font-face {
     font-family: $font-family;
     src: url("../assets/fonts/#{$file-path}.eot");
-    src: url("../assets/fonts/#{$file-path}.eot#iefix") format(’embedded-opentype’),
-    url("../assets/fonts/#{$file-path}.woff") format(‘woff’),
-    url("../assets/fonts/#{$file-path}.ttf") format(‘truetype’);
+    src: url("../assets/fonts/#{$file-path}.eot#iefix") format('embedded-opentype'),
+    url("../assets/fonts/#{$file-path}.woff") format('woff'),
+    url("../assets/fonts/#{$file-path}.ttf") format('truetype');
     font-weight: $font-weight;
     font-style: $font-style;
   }
+}
+
+
+@font-face {
+  font-family: 'Federo';
+  src: url(../assets/fonts/Federo-Regular.ttf) format('truetype');
 }
 
 @include font-face(Droid, DroidSerif, normal, normal);
 @include font-face(Droid, DroidSerif-Bold, bold, normal);
 @include font-face(Droid, DroidSerif-BoldItalic, bold, italic);
 @include font-face(Droid, DroidSerif-Italic, normal, italic);
-@include font-face(Federo, Federo-Regular, normal, normal);
 
 body {
   font-family: "Droid Serif", Helvetica, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Federo, Helvetica, sans-serif;
+  font-family: 'Federo', Helvetica, sans-serif;
 }
