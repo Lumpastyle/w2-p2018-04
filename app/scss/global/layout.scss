@@ -1,8 +1,10 @@
 $w: #fff;
 $b: #000;
 $yellow: #af8500;
+$beige: #c4be6b;
+$ocre: #c29a03;
 $green: #19642d;
-$greenA: rgba(25, 100, 45, 0.7);
+$greenA: rgba(25, 100, 45, 0.9);
 
 $size1: 3.99em;
 $size2: 2.827em;
@@ -14,25 +16,12 @@ $size6: 0.707em;
 body{
   color: $w;
   background-color: $b;
-  background: url(../assets/img/background_home.png) no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  @media screen and (min-width: 0px) and (max-width: 640px){
-    background: url(../assets/img/background_home.png) no-repeat top fixed;
-    -webkit-background-size: 300%;
-    -moz-background-size: 300%;
-    -o-background-size: 300%;
-    background-size: 300%;
-  }
 }
 
 header {
   position: fixed;
   z-index: 50;
-  top: 1rem;
+  top: 1.5rem;
   width : 54px;
   left : 50%;
   margin-left : -27px;
@@ -48,7 +37,7 @@ header {
 }
 
 h1, h2{
-  font-size: $size1;
+  font-size: $size2;
   line-height: $size5;
 }
 h3{
@@ -57,63 +46,57 @@ h3{
 
 p{
   font-size: $size5;
-  line-height: $size5;
+  line-height: $size4;
 }
-.one{
-  margin-top: 13rem;
-}
+
 
 .content-head {
   position: relative;
 }
 
-/* h1:before {
-  width: 10rem;
-  content: " ";
-  background-image: url(/assets/img/title_arrow_left.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  margin-left: -20rem;
-  height: 1.5rem
-}
- h1:after {
-  width: 10rem;
-  content: " ";
-  background-image: url(/assets/img/title_arrow_right.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  margin-right: -40rem;
-  height: 1.5rem
-}
-*/
+
 
 .clickable{
   cursor: pointer;
+  z-index: 5;
 }
 .staticControls{
-  .burger{
-    z-index: 50;
+  position: fixed;
+  z-index: 25;
+
+  .menuOpen{
     position: fixed;
+  }
+  .menuClose{
+    position: absolute;
+  }
+  .menuOpen, .menuClose{
+    z-index: 25;
     right: 1.5rem;
     top: 1.5rem;
     width: 4rem;
     height: 4rem;
   }
-  .staticControls-actionBtn{
-    z-index: 25;
-    position: fixed;
-    width : 100px;
-    text-align: center;
-    left : 50%;
-    margin-left : -50px;
-    bottom: 0.1rem;
-    height: 6rem;
-    font-size: $size5;
-    font-style: italic;
-    background-image: url(/assets/svg/arrow_down.svg );
-    background-repeat: no-repeat;
-    background-position: center;
+ .navi{
+   z-index: 80;
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background-image: url(/assets/img/background_menu.png ) ;
+   background-size: cover;
+   left: -100%;
+   top:0;
+   -webkit-transition: all .5s;
+   -moz-transition: all .5s;
+   -ms-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+
+ }
+  .navi.active{
+    left: 0;
   }
+
   .staticControls-social{
     z-index: 25;
     position: fixed;
@@ -127,24 +110,28 @@ p{
 
     }
   }
-  .staticControls-steps{
-    position: fixed;
-    height: 100vh;
-    left: 5rem;
-    top: 0;
-    ul{
-      margin-top: (50vh - 10vh) ;
+  @media screen and (min-width: 640px){
+    .staticControls-steps{
+      position: fixed;
+      height: 100vh;
+      left: 5rem;
+      top: 0;
+      ul{
+        margin-top: (50vh - 10vh) ;
+      }
+      li{
+        text-align: center;
+        margin-bottom: 1rem;
+      }
     }
-    li{
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
   }
-  .staticControls-gradient--bottom{
-    position: fixed;
-    bottom: 0;
-    height: 7rem;
+  @media screen and (max-width: 640px){
+    .staticControls-steps{
+      display: none;
+    }
+  }
+  .gradient--bottom{
+    position: absolute;
     width: 100%;
     background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(0,0,0,0.67) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(0,0,0,0.67) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -163,18 +150,33 @@ p{
   }
 }
 
+
+section{
+  height: 100vh;
+}
+
 .content-master{
   position: relative;
-  height: 100vh;
-  width: 60%;
   margin: 0 auto;
   .content-head h1, .content-head h2{
      text-align: center;
 
   }
 
-
-
+}
+.actionBtn{
+  position: absolute;
+  width : 100px;
+  text-align: center;
+  left : 50%;
+  margin-left : -50px;
+  bottom: 0.1rem;
+  height: 6rem;
+  font-size: $size5;
+  font-style: italic;
+  background-image: url(/assets/svg/arrow_down.svg );
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .one, .two, .three, .four{
@@ -185,7 +187,7 @@ p{
     font-style: italic;
     font-weight: 500;
     width: 80%;
-    margin: 10vh auto 0;
+    margin: 0 auto;
     text-align: center;
 
   }
@@ -194,17 +196,47 @@ p{
 
 
 .one{
+  background: url(../assets/img/background_home.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_home.png) no-repeat top ;
+  }
+  h1{
+    margin: 0 auto;
+  }
+  svg{
+    margin: 15vh auto 5vh;
+  }
   img{
-    opacity: 0.7;
-    margin: 10vh auto 0;
+    margin-top: -4rem;
+    width: 100%;
+    max-width: 30rem;
   }
 }
 .two {
-  p{
-    text-align: start;
+  height: 100vh;
+  background: url(../assets/img/background_histoire.png) repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_histoire.png) repeat top ;
   }
+  p{
+    margin-top: 2vh;
+    text-align: center;
+  }
+  svg{
+    margin: 15vh auto 5vh;
+  }
+
   .content-body--frame{
     width: 100%;
+    max-width: 40rem;
     margin: 2rem auto 0;
     padding: 3rem 1rem;
     background-color: $greenA;
@@ -212,24 +244,163 @@ p{
     p, h3{
       font-family:  Helvetica, sans-serif;
       font-style: normal;
+      line-height: $size4;
     }
     h3{
       font-weight: bold;
       text-align: left;
     }
     p{
-      font-size: $size5;
+      text-align: left;
+      font-size: $size6;
       margin-top: 2rem;
+      font-weight: 100;
     }
   }
 
+
+  .two--img{
+    position: absolute;
+    z-index: 1;
+    margin: 13rem auto ;
+    display: block;
+    height: 25rem;
+    max-width: 25rem;
+
+  }
+  @media screen and (max-width: 640px)  {
+    .two--img{
+      display: none;
+    }
+  }
+  .two--float{
+    position: absolute;
+    width: 20vh;
+    margin-top: -5rem;
+  }
+}
+
+.three{
+  padding-top: 13vh;
+  box-sizing: border-box;
+  height: 100vh;
+  background: url(../assets/img/background_histoire.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_histoire.png) no-repeat top ;
+  }
+  p{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+
+  }
   img{
     width: 100%;
+    max-width: 30rem;
+  }
+  ul{
+    margin-top: -15rem;
+    position: absolute;
+  }
+  li{
+    font-size: $size6;
+    display: block;
+    width: 5rem;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding-top: 0.2rem;
+    height: 1.2rem;
+    margin-top: 1rem;
   }
 
+  li:nth-child(1),li:nth-child(3){
+    float: left;
+    margin-right: 80%;
+    background-color: $ocre;
+  }
+  li:nth-child(2),li:nth-child(4){
+    float: right;
+    background-color: $beige;
+  }
+  p:nth-child(2),p:nth-child(3){
+    font-size: $size6;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+  }
+  p:nth-child(3){
+    margin-top: 20px;
+  }
 }
-.two--img{
-  position: absolute;
-  z-index: -1;
-  margin-top: 19rem
+.four{
+  padding-top: 13vh;
+  box-sizing: border-box;
+  height: 100vh;
+  background: url(../assets/img/background_form.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_form.png) no-repeat top ;
+  }
+  h2{
+    margin-bottom: 2rem;
+
+  }
+  p{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  form{
+    input[type=text], input[type=email]{
+      border: none;
+      width: 80%;
+      color: $w;
+      box-sizing: border-box;
+      padding-left: 1rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      border-bottom: solid 1px $ocre;
+      text-transform: uppercase;
+    }
+    input:focus{
+      border: none;
+      border-bottom: solid 1px $yellow;
+    }
+    input
+    {
+      color: $ocre;
+    }
+    input[type=submit]{
+      margin-top: 2rem ;
+      width: 80%;
+      color: $ocre;
+      box-sizing: border-box;
+      padding-left: 1rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      border: solid 1px $ocre;
+
+    }
+  }
+  ul{
+    margin-left: (50vw);
+    margin-right: -34px;
+  }
+  li{
+    float: left;
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+  }
 }

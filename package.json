@@ -10,7 +10,8 @@
     "gulp-image": "^2.7.5",
     "gulp-minify": "0.0.15",
     "gulp-sass": "^2.3.2",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "jquery": "2.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
