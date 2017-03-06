@@ -1,8 +1,10 @@
 $w: #fff;
 $b: #000;
 $yellow: #af8500;
+$beige: #c4be6b;
+$ocre: #c29a03;
 $green: #19642d;
-$greenA: rgba(25, 100, 45, 0.8);
+$greenA: rgba(25, 100, 45, 0.9);
 
 $size1: 3.99em;
 $size2: 2.827em;
@@ -209,9 +211,14 @@ section{
   svg{
     margin: 15vh auto 5vh;
   }
+  img{
+    margin-top: -4rem;
+    width: 100%;
+    max-width: 30rem;
+  }
 }
 .two {
-  height: 65rem;
+  height: 100vh;
   background: url(../assets/img/background_histoire.png) repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -227,8 +234,10 @@ section{
   svg{
     margin: 15vh auto 5vh;
   }
+
   .content-body--frame{
     width: 100%;
+    max-width: 40rem;
     margin: 2rem auto 0;
     padding: 3rem 1rem;
     background-color: $greenA;
@@ -244,7 +253,7 @@ section{
     }
     p{
       text-align: left;
-      font-size: $size5;
+      font-size: $size6;
       margin-top: 2rem;
       font-weight: 100;
     }
@@ -254,19 +263,28 @@ section{
   .two--img{
     position: absolute;
     z-index: 1;
-    margin: 13rem auto 0 auto;
-    width: 100%;
+    margin: 13rem auto ;
+    display: block;
+    height: 25rem;
+    max-width: 25rem;
 
+  }
+  @media screen and (max-width: 640px)  {
+    .two--img{
+      display: none;
+    }
   }
   .two--float{
     position: absolute;
     width: 20vh;
-    margin-top: -50px;
+    margin-top: -5rem;
   }
 }
 
 .three{
-  height: 1100px;
+  padding-top: 13vh;
+  box-sizing: border-box;
+  height: 100vh;
   background: url(../assets/img/background_histoire.png) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -274,5 +292,106 @@ section{
   background-size: cover;
   @media screen and (min-width: 0px) and (max-width: 640px){
     background: url(../assets/img/background_histoire.png) no-repeat top ;
+  }
+  p{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+
+  }
+  img{
+    width: 100%;
+    max-width: 30rem;
+  }
+  ul{
+    margin-top: -15rem;
+    position: absolute;
+  }
+  li{
+    font-size: $size6;
+    display: block;
+    width: 5rem;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding-top: 0.2rem;
+    height: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  li:nth-child(1),li:nth-child(3){
+    float: left;
+    margin-right: 80%;
+    background-color: $ocre;
+  }
+  li:nth-child(2),li:nth-child(4){
+    float: right;
+    background-color: $beige;
+  }
+  p:nth-child(2),p:nth-child(3){
+    font-size: $size6;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+  }
+  p:nth-child(3){
+    margin-top: 20px;
+  }
+}
+.four{
+  padding-top: 13vh;
+  box-sizing: border-box;
+  height: 100vh;
+  background: url(../assets/img/background_form.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_form.png) no-repeat top ;
+  }
+  h2{
+    margin-bottom: 2rem;
+
+  }
+  p{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  form{
+    input[type=text], input[type=email]{
+      border: none;
+      width: 80%;
+      color: $w;
+      box-sizing: border-box;
+      padding-left: 1rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      border-bottom: solid 1px $ocre;
+      text-transform: uppercase;
+    }
+    input:focus{
+      border: none;
+      border-bottom: solid 1px $yellow;
+    }
+    input
+    {
+      color: $ocre;
+    }
+    input[type=submit]{
+      margin-top: 2rem ;
+      width: 80%;
+      color: $ocre;
+      box-sizing: border-box;
+      padding-left: 1rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      border: solid 1px $ocre;
+
+    }
   }
 }
