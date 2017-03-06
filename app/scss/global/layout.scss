@@ -2,7 +2,7 @@ $w: #fff;
 $b: #000;
 $yellow: #af8500;
 $green: #19642d;
-$greenA: rgba(25, 100, 45, 0.7);
+$greenA: rgba(25, 100, 45, 0.8);
 
 $size1: 3.99em;
 $size2: 2.827em;
@@ -14,25 +14,12 @@ $size6: 0.707em;
 body{
   color: $w;
   background-color: $b;
-  background: url(../assets/img/background_home.png) no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  @media screen and (min-width: 0px) and (max-width: 640px){
-    background: url(../assets/img/background_home.png) no-repeat top fixed;
-    -webkit-background-size: 300%;
-    -moz-background-size: 300%;
-    -o-background-size: 300%;
-    background-size: 300%;
-  }
 }
 
 header {
   position: fixed;
   z-index: 50;
-  top: 1rem;
+  top: 1.5rem;
   width : 54px;
   left : 50%;
   margin-left : -27px;
@@ -48,7 +35,7 @@ header {
 }
 
 h1, h2{
-  font-size: $size1;
+  font-size: $size2;
   line-height: $size5;
 }
 h3{
@@ -57,63 +44,55 @@ h3{
 
 p{
   font-size: $size5;
-  line-height: $size5;
+  line-height: $size4;
 }
-.one{
-  margin-top: 13rem;
-}
+
 
 .content-head {
   position: relative;
 }
 
-/* h1:before {
-  width: 10rem;
-  content: " ";
-  background-image: url(/assets/img/title_arrow_left.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  margin-left: -20rem;
-  height: 1.5rem
-}
- h1:after {
-  width: 10rem;
-  content: " ";
-  background-image: url(/assets/img/title_arrow_right.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  margin-right: -40rem;
-  height: 1.5rem
-}
-*/
+
 
 .clickable{
   cursor: pointer;
 }
 .staticControls{
-  .burger{
-    z-index: 50;
+  position: fixed;
+  z-index: 25;
+
+  .menuOpen{
     position: fixed;
+  }
+  .menuClose{
+    position: absolute;
+  }
+  .menuOpen, .menuClose{
+    z-index: 25;
     right: 1.5rem;
     top: 1.5rem;
     width: 4rem;
     height: 4rem;
   }
-  .staticControls-actionBtn{
-    z-index: 25;
-    position: fixed;
-    width : 100px;
-    text-align: center;
-    left : 50%;
-    margin-left : -50px;
-    bottom: 0.1rem;
-    height: 6rem;
-    font-size: $size5;
-    font-style: italic;
-    background-image: url(/assets/svg/arrow_down.svg );
-    background-repeat: no-repeat;
-    background-position: center;
+ .navi{
+   z-index: 50;
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background-color: #af8500;
+   left: -100%;
+   top:0;
+   -webkit-transition: all .5s;
+   -moz-transition: all .5s;
+   -ms-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+
+ }
+  .navi.active{
+    left: 0;
   }
+
   .staticControls-social{
     z-index: 25;
     position: fixed;
@@ -127,19 +106,25 @@ p{
 
     }
   }
-  .staticControls-steps{
-    position: fixed;
-    height: 100vh;
-    left: 5rem;
-    top: 0;
-    ul{
-      margin-top: (50vh - 10vh) ;
+  @media screen and (min-width: 640px){
+    .staticControls-steps{
+      position: fixed;
+      height: 100vh;
+      left: 5rem;
+      top: 0;
+      ul{
+        margin-top: (50vh - 10vh) ;
+      }
+      li{
+        text-align: center;
+        margin-bottom: 1rem;
+      }
     }
-    li{
-      text-align: center;
-      margin-bottom: 1rem;
+  }
+  @media screen and (max-width: 640px){
+    .staticControls-steps{
+      display: none;
     }
-
   }
   .staticControls-gradient--bottom{
     position: fixed;
@@ -163,18 +148,34 @@ p{
   }
 }
 
+
+section{
+  height: 100vh;
+}
+
 .content-master{
   position: relative;
-  height: 100vh;
-  width: 60%;
   margin: 0 auto;
   .content-head h1, .content-head h2{
      text-align: center;
 
   }
 
-
-
+}
+.actionBtn{
+  z-index: 25;
+  position: absolute;
+  width : 100px;
+  text-align: center;
+  left : 50%;
+  margin-left : -50px;
+  bottom: 0.1rem;
+  height: 6rem;
+  font-size: $size5;
+  font-style: italic;
+  background-image: url(/assets/svg/arrow_down.svg );
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .one, .two, .three, .four{
@@ -185,7 +186,7 @@ p{
     font-style: italic;
     font-weight: 500;
     width: 80%;
-    margin: 10vh auto 0;
+    margin: 0 auto;
     text-align: center;
 
   }
@@ -194,14 +195,37 @@ p{
 
 
 .one{
-  img{
-    opacity: 0.7;
-    margin: 10vh auto 0;
+  background: url(../assets/img/background_home.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_home.png) no-repeat top ;
+  }
+  h1{
+    margin: 0 auto;
+  }
+  svg{
+    margin: 15vh auto 5vh;
   }
 }
 .two {
+  height: 65rem;
+  background: url(../assets/img/background_histoire.png) repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_histoire.png) repeat top ;
+  }
   p{
-    text-align: start;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  svg{
+    margin: 15vh auto 5vh;
   }
   .content-body--frame{
     width: 100%;
@@ -212,24 +236,43 @@ p{
     p, h3{
       font-family:  Helvetica, sans-serif;
       font-style: normal;
+      line-height: $size4;
     }
     h3{
       font-weight: bold;
       text-align: left;
     }
     p{
+      text-align: left;
       font-size: $size5;
       margin-top: 2rem;
+      font-weight: 100;
     }
   }
 
-  img{
-    width: 100%;
-  }
 
+  .two--img{
+    position: absolute;
+    z-index: 1;
+    margin: 13rem auto 0 auto;
+    width: 100%;
+
+  }
+  .two--float{
+    position: absolute;
+    width: 20vh;
+    margin-top: -50px;
+  }
 }
-.two--img{
-  position: absolute;
-  z-index: -1;
-  margin-top: 19rem
+
+.three{
+  height: 1100px;
+  background: url(../assets/img/background_histoire.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @media screen and (min-width: 0px) and (max-width: 640px){
+    background: url(../assets/img/background_histoire.png) no-repeat top ;
+  }
 }
