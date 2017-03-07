@@ -65,28 +65,24 @@ $(function() {
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
             if (scroll < w1) {
-                console.log("Accueil");
                 one.addClass("active");
                 two.removeClass("active");
                 three.removeClass("active");
                 four.removeClass("active");
             }
             else if (scroll < w2 ){
-                console.log("Histoire");
                 one.removeClass("active");
                 two.addClass("active");
                 three.removeClass("active");
                 four.removeClass("active");
             }
             else if (scroll < w3){
-                console.log("Emossions");
                 one.removeClass("active");
                 two.removeClass("active");
                 three.addClass("active");
                 four.removeClass("active");
             }
             else if (scroll < w4){
-                console.log("Inscriptions");
                 one.removeClass("active");
                 two.removeClass("active");
                 three.removeClass("active");
