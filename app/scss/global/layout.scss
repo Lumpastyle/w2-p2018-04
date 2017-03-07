@@ -92,7 +92,7 @@ p {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-image: url("/assets/img/background_menu.png") ;
+    background-image: url("../assets/img/background_menu.png") ;
     background-size: cover;
     left: -100%;
     top:0;
@@ -118,7 +118,7 @@ p {
     }
 
     li:before {
-      content: url("/assets/svg/losange.svg");
+      content: url("../assets/svg/losange.svg");
       width: 5px;
       height: 5px;
       position: absolute;
@@ -214,7 +214,7 @@ section {
   height: 6rem;
   font-size: $size5;
   font-style: italic;
-  background-image: url(/assets/svg/arrow_down.svg );
+  background-image: url(../assets/svg/arrow_down.svg );
   background-repeat: no-repeat;
   background-position: center;
 }
