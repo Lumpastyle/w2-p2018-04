@@ -1,7 +1,8 @@
 {
+
   "name": "w2-p2018-04-nespresso",
   "version": "1.0.0",
-  "description": "This is a basic repository to start the HETIC Mobile First course.",
+  "description": "This is a basic repository for the Nespresso project of the Groupe 4.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {

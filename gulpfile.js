@@ -49,14 +49,17 @@ gulp.task('jquery', function () {
     return gulp.src('./node_modules/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('dist/js/'));
 });
-
+gulp.task('ico', function () {
+    return gulp.src('app/assets/ico/*')
+        .pipe(gulp.dest('dist/assets/ico'));
+});
 gulp.task('watch', function() {
   gulp.watch(['./app/scss/**/*.scss'], ['scss']);
   gulp.watch(['./app/index.html'], ['html']);
   gulp.watch(['./app/js/*.js'], ['js']);
 });
 
-gulp.task('sync', ['html', 'scss', 'watch', 'js', 'svg', 'img', 'fonts', 'jquery'], function() {
+gulp.task('sync', ['html', 'scss', 'watch', 'ico', 'js', 'svg', 'img', 'fonts', 'jquery'], function() {
     sync.init({
         server: __dirname + '/dist'
     });

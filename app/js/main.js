@@ -50,15 +50,16 @@ $(document).ready(function(){
 $(function() {
 
     var viewportHeight = $(window).height();
-    w1 = viewportHeight;
-    w2 = viewportHeight*2;
-    w3 = viewportHeight*3;
-    w4 = viewportHeight*4;
+
     //caches a jQuery object containing the header element
     var one = $("#one");
     var two = $("#two");
     var three = $("#three");
     var four = $("#four");
+    w1 = viewportHeight;
+    w2 = viewportHeight*1.8;
+    w3 = viewportHeight*2.5;
+    w4 = viewportHeight*3.4;
 
     if (clicking != true){
         $(window).scroll(function() {
