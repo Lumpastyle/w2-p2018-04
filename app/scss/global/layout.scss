@@ -53,7 +53,7 @@ p {
   line-height: $size4;
 }
 
-.content-head {
+.content__head {
   position: relative;
 }
 
@@ -195,11 +195,11 @@ section {
   height: 100vh;
 }
 
-.content-master {
+.content__master {
   position: relative;
   margin: 0 auto;
 
-  .content-head h1, .content-head h2 {
+  .content__head h1, .content__head h2 {
     text-align: center;
   }
 }
@@ -221,7 +221,7 @@ section {
 
 .one, .two, .three, .four {
 
-  .content-body {
+  .content__body {
     position: relative;
     z-index: 2;
     font-style: italic;
@@ -282,7 +282,7 @@ section {
     margin: 15vh auto 5vh;
   }
 
-  .content-body--frame {
+  .content__body--frame {
     width: 100%;
     max-width: 40rem;
     margin: 2rem auto 0;
