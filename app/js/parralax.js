@@ -7,7 +7,7 @@ open[0].addEventListener("click", openBurger, false);
 close[0].addEventListener("click", closeBurger, false);
 
 function openBurger() {
-    $('.navi').addClass('active');
+    navi[0].classList = "navi active";
 }
 function closeBurger() {
     navi[0].classList = "navi";
@@ -15,4 +15,3 @@ function closeBurger() {
 
 
 console.log("Hauteur:"+ $( window ).height()+"px");
-$(window).stellar();

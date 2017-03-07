@@ -217,7 +217,7 @@ section{
   }
 }
 .two {
-  height: 100vh;
+  height: 130vh;
   background: url(../assets/img/background_histoire.png) repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -250,11 +250,21 @@ section{
       font-weight: bold;
       text-align: left;
     }
+    .separateur{
+      margin: 0.5rem 0 1rem;
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background-color: $w;
+    }
     p{
       text-align: left;
-      font-size: $size6;
-      margin-top: 2rem;
+      font-size: $size5;
+      margin-top: 1rem;
       font-weight: 100;
+    }
+    p:nth-child(2){
+      margin-top: 2rem;
     }
   }
 
