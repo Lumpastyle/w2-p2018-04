@@ -57,7 +57,8 @@ p {
   position: relative;
 }
 
-.clickable {
+
+.clickable{
   cursor: pointer;
   z-index: 5;
 }
@@ -480,4 +481,19 @@ section {
     height: 34px;
     display: inline-block;
   }
+}
+
+.staticControls-steps{
+
+
+  svg{
+    display: none;
+  }
+  .active img{
+    display: none;
+  }
+  .active svg{
+    display: inline-block;
+  }
+
 }
