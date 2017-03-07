@@ -1,6 +1,6 @@
 # Groupe 4 Mobile First repository
 This is a basic repository for the Nespresso project of the Groupe 4 !
-A voir ici : wdelenclos.fr/nespresso
+A voir ici : wdelenclos.fr/nespresso (https://wdelenclos.fr/nespresso)
 
 ## Installation
 Make sure that [NodeJS and npm](https://docs.npmjs.com/getting-started/installing-node) are installed on your computer. You will also need [GIT](https://git-scm.com/downloads).
