@@ -45,6 +45,8 @@ $(document).ready(function(){
 });
 // Navigation points scroll
 
+
+
 $(function() {
 
     var viewportHeight = $(window).height();
@@ -52,16 +54,15 @@ $(function() {
     w2 = viewportHeight*2;
     w3 = viewportHeight*3;
     w4 = viewportHeight*4;
-
     //caches a jQuery object containing the header element
     var one = $("#one");
     var two = $("#two");
     var three = $("#three");
     var four = $("#four");
+
     if (clicking != true){
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
-
             if (scroll < w1) {
                 console.log("Accueil");
                 one.addClass("active");

@@ -13,7 +13,7 @@ $size4: 1.414em;
 $size5: 1em;
 $size6: 0.707em;
 
-body{
+body {
   color: $w;
   background-color: $b;
 }
@@ -26,133 +26,151 @@ header {
   left : 50%;
   margin-left : -27px;
 }
-.colored{
+
+.colored {
   color: $yellow;
 }
-.colored2{
+
+.colored2 {
   color: $green;
 }
-.bolded{
+
+.bolded {
   font-weight: 600;
 }
 
-h1, h2{
+h1, h2 {
   font-size: $size2;
   line-height: $size5;
 }
-h3{
+
+h3 {
   font-size: $size4;
 }
 
-p{
+p {
   font-size: $size5;
   line-height: $size4;
 }
-
 
 .content-head {
   position: relative;
 }
 
-
-.clickable{
+.clickable {
+  color: $w;
   cursor: pointer;
   z-index: 5;
 }
-.staticControls{
+
+.staticControls {
   position: fixed;
   z-index: 25;
 
-  .menuOpen{
+  .menuOpen {
     position: fixed;
+
+    @media screen and (min-width: 640px) {
+      display: none;
+    }
   }
-  .menuClose{
+
+  .menuClose {
     position: absolute;
   }
-  .menuOpen, .menuClose{
+
+  .menuOpen, .menuClose {
     z-index: 25;
     right: 1.5rem;
     top: 1.5rem;
     width: 4rem;
     height: 4rem;
   }
- .navi{
-   z-index: 80;
-   position: fixed;
-   width: 100%;
-   height: 100vh;
-   background-image: url("/assets/img/background_menu.png") ;
-   background-size: cover;
-   left: -100%;
-   top:0;
-   -webkit-transition: all .5s;
-   -moz-transition: all .5s;
-   -ms-transition: all .5s;
-   -o-transition: all .5s;
-   transition: all .5s;
 
-   ul {
-     padding: 5rem 0 5rem 3rem;
-   }
+  .navi {
+    z-index: 80;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/img/background_menu.png") ;
+    background-size: cover;
+    left: -100%;
+    top:0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 
-   li {
-     font-size: $size4;
-     font-family: Federo;
-     margin: 4rem 0 4rem 1rem;
+    ul {
+      padding: 5rem 0 5rem 3rem;
+    }
 
-     a {
-       color: $w;
-       text-decoration: none;
-     }
-   }
+    li {
+      font-size: $size4;
+      font-family: Federo;
+      margin: 4rem 0 4rem 1rem;
 
-   li:before {
-     content: url("/assets/svg/losange.svg");
-     width: 5px;
-     height: 5px;
-     position: absolute;
-     margin-left: -30px;
-   }
+      a {
+        color: $w;
+        text-decoration: none;
+      }
+    }
 
- }
-  .navi.active{
+    li:before {
+      content: url("/assets/svg/losange.svg");
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      margin-left: -30px;
+    }
+
+  }
+  .navi.active {
     left: 0;
   }
 
-  .staticControls-social{
+  .staticControls-social {
     z-index: 25;
     position: fixed;
     width : 100px;
     text-align: center;
     right : 2rem;
     bottom: 3rem;
-    li{
+
+    li {
       display: inline;
       margin-right: 1em;
-
     }
   }
-  @media screen and (min-width: 640px){
-    .staticControls-steps{
+
+  @media screen and (min-width: 640px) {
+
+    .staticControls-steps {
       position: fixed;
       height: 100vh;
       left: 5rem;
       top: 0;
-      ul{
+
+      ul {
         margin-top: (50vh - 10vh) ;
       }
-      li{
+
+      li {
         text-align: center;
         margin-bottom: 1rem;
       }
     }
   }
-  @media screen and (max-width: 640px){
-    .staticControls-steps{
+
+  @media screen and (max-width: 640px) {
+
+    .staticControls-steps {
       display: none;
     }
   }
-  .gradient--bottom{
+
+  .gradient--bottom {
     position: absolute;
     width: 100%;
     background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(0,0,0,0.67) 100%); /* FF3.6-15 */
@@ -160,7 +178,8 @@ p{
     background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(0,0,0,0.67) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#ab000000',GradientType=0 ); /* IE6-9 */
   }
-  .staticControls-gradient--top{
+
+  .staticControls-gradient--top {
     position: fixed;
     top: 0;
     height: 7rem;
@@ -172,21 +191,20 @@ p{
   }
 }
 
-
-section{
+section {
   height: 100vh;
 }
 
-.content-master{
+.content-master {
   position: relative;
   margin: 0 auto;
-  .content-head h1, .content-head h2{
-     text-align: center;
 
+  .content-head h1, .content-head h2 {
+    text-align: center;
   }
-
 }
-.actionBtn{
+
+.actionBtn {
   position: absolute;
   width : 100px;
   text-align: center;
@@ -201,9 +219,9 @@ section{
   background-position: center;
 }
 
-.one, .two, .three, .four{
+.one, .two, .three, .four {
 
-  .content-body{
+  .content-body {
     position: relative;
     z-index: 2;
     font-style: italic;
@@ -211,34 +229,37 @@ section{
     width: 80%;
     margin: 0 auto;
     text-align: center;
-
   }
 }
 
-
-
-.one{
+.one {
   background: url(../assets/img/background_home.png) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  h1{
+
+  h1 {
     margin: 0 auto;
-  }
-  svg{
-    margin: 15vh auto 5vh;
-  }
-  img{
-    margin-top: -4rem;
-    width: 100%;
-    max-width: 30rem;
+    z-index:3;
   }
 
-  .content-body p {
-    margin-top: -3rem;
+  svg {
+    margin: 15vh auto 5vh;
+  }
+
+  img {
+    margin: -5rem auto -5rem;
+    width: 100%;
+    max-width: 30rem;
+    z-index: 0;
+
+    @media screen and (min-width: 640px) {
+      margin: -10rem auto -7rem;
+    }
   }
 }
+
 .two {
   height: 130vh;
   background: url(../assets/img/background_histoire.png) repeat center;
@@ -246,74 +267,83 @@ section{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media screen and (min-width: 0px) and (max-width: 640px){
+
+  @media screen and (min-width: 0px) and (max-width: 640px) {
     background: url(../assets/img/background_histoire.png) repeat top ;
   }
-  p{
+
+  p {
     margin-top: 2vh;
     text-align: center;
   }
-  svg{
+
+  svg {
     margin: 15vh auto 5vh;
   }
 
-  .content-body--frame{
+  .content-body--frame {
     width: 100%;
     max-width: 40rem;
     margin: 2rem auto 0;
     padding: 3rem 1rem;
     background-color: $greenA;
     box-sizing: border-box;
-    p, h3{
+
+    p, h3 {
       font-family:  Helvetica, sans-serif;
       font-style: normal;
       line-height: $size4;
     }
-    h3{
+
+    h3 {
       font-weight: bold;
       text-align: left;
     }
-    .separateur{
+
+    .separateur {
       margin: 0.5rem 0 1rem;
       display: block;
       width: 2rem;
       height: 2px;
       background-color: $w;
     }
-    p{
+
+    p {
       text-align: left;
       font-size: $size5;
       margin-top: 1rem;
       font-weight: 100;
     }
-    p:nth-child(2){
+
+    p:nth-child(2) {
       margin-top: 2rem;
     }
   }
 
-
-  .two--img{
+  .two--img {
     position: absolute;
     z-index: 1;
     margin: 13rem auto ;
     display: block;
     height: 25rem;
     max-width: 25rem;
-
   }
-  @media screen and (max-width: 640px)  {
-    .two--img{
+
+  @media screen and (max-width: 640px) {
+
+    .two--img {
       display: none;
     }
   }
-  .two--float{
+
+  .two--float {
     position: absolute;
     width: 20vh;
     margin-top: -5rem;
   }
 }
 
-.three{
+.three {
   padding-top: 13vh;
   box-sizing: border-box;
   height: 100vh;
@@ -322,24 +352,29 @@ section{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media screen and (min-width: 0px) and (max-width: 640px){
+
+  @media screen and (min-width: 0px) and (max-width: 640px) {
     background: url(../assets/img/background_histoire.png) no-repeat top ;
   }
-  p{
+
+  p {
     margin: auto;
     width: 70%;
     text-align: center;
 
   }
-  img{
+
+  img {
     width: 100%;
     max-width: 30rem;
   }
-  ul{
+
+  ul {
     margin-top: -15rem;
     position: absolute;
   }
-  li{
+
+  li {
     font-size: $size6;
     display: block;
     width: 5rem;
@@ -350,26 +385,30 @@ section{
     margin-top: 1rem;
   }
 
-  li:nth-child(1),li:nth-child(3){
+  li:nth-child(1),li:nth-child(3) {
     float: left;
     margin-right: 80%;
     background-color: $ocre;
   }
-  li:nth-child(2),li:nth-child(4){
+
+  li:nth-child(2),li:nth-child(4) {
     float: right;
     background-color: $beige;
   }
-  p:nth-child(2),p:nth-child(3){
+
+  p:nth-child(2),p:nth-child(3) {
     font-size: $size6;
     margin: auto;
     width: 90%;
     text-align: center;
   }
-  p:nth-child(3){
+
+  p:nth-child(3) {
     margin-top: 20px;
   }
 }
-.four{
+
+.four {
   padding-top: 13vh;
   box-sizing: border-box;
   height: 100vh;
@@ -378,22 +417,25 @@ section{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media screen and (min-width: 0px) and (max-width: 640px){
+
+  @media screen and (min-width: 0px) and (max-width: 640px) {
     background: url(../assets/img/background_form.png) no-repeat top ;
   }
-  h2{
-    margin-bottom: 2rem;
 
+  h2 {
+    margin-bottom: 2rem;
   }
-  p{
+
+  p {
     margin: auto;
     width: 70%;
     text-align: center;
     margin-bottom: 1.5rem;
   }
 
-  form{
-    input[type=text], input[type=email]{
+  form {
+
+    input[type=text], input[type=email] {
       border: none;
       width: 80%;
       color: $w;
@@ -405,15 +447,17 @@ section{
       border-bottom: solid 1px $ocre;
       text-transform: uppercase;
     }
-    input:focus{
+
+    input:focus {
       border: none;
       border-bottom: solid 1px $yellow;
     }
-    input
-    {
+
+    input {
       color: $ocre;
     }
-    input[type=submit]{
+
+    input[type=submit] {
       margin-top: 2rem ;
       width: 80%;
       color: $ocre;
@@ -423,14 +467,15 @@ section{
       margin-bottom: 1rem;
       background: transparent;
       border: solid 1px $ocre;
-
     }
   }
-  ul{
+
+  ul {
     margin-left: (50vw);
     margin-right: -34px;
   }
-  li{
+
+  li {
     float: left;
     width: 34px;
     height: 34px;
@@ -438,16 +483,15 @@ section{
   }
 }
 
-.staticControls-steps{
-
-
-  svg{
+.staticControls-steps {
+  svg {
     display: none;
   }
-  .active img{
+
+  .active img {
     display: none;
   }
-  .active svg{
+  .active svg {
     display: inline-block;
   }
 
